@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@200;400&display=swap');
+:root {
+    --color1: #e3738c;
+    --color2: #f2a3a9;
+    --color3: #edbcb8;
+    --color4: #efcdc4;
+    --color5: #f2e1d9;
+    --color6: #b2ad8d;
+    --color7: #bec9a7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--color7) ;
+}
+
+.seccion {
+    background-image: url('./img/Flor-hero.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+}
+
+.seccion::after {
+    content: '';
+    background-image: url('./img/separador.fondo.svg');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;  
+    box-sizing: border-box;
+    bottom: 0;
+    z-index: 1;
+}
+
+.contenido {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Trae el contenido al frente */
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa de oscurecimiento */
+    z-index: 0; /* Asegura que la capa de oscurecimiento esté detrás del contenido */
+}
+
+.flor-icon{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3.5rem !important;
+    position: relative;
+    margin: 0.1rem auto;
+    font-family: 'Croissant One', cursive;
+    color: white;
+    padding: 0.7rem 0;
+    z-index: 1;
+    
+}
+
+h4 {
+    position: relative;
+    font-family: 'Croissant One', cursive;
+    color: white;
+    padding: 0.5rem 0;
+    z-index: 1;
+
+}
+
+.linea{
+    border: #fff solid 1.5px;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    z-index: 1;
+    color:#fff;
+}
+.fecha {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    font-size: 1.5rem;
+    color:#ffffff; /* Cambia al color que desees */
+    margin: 20px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.fecha::before,
+.fecha::after {
+    vertical-align: middle;
+    content: '';
+    display: inline-block;
+    width: 50px; /* Ancho de las líneas */
+    height: 2px; /* Grosor de las líneas */
+    background-color: #fff; /* Cambia al color que desees */
+    margin: 0 10px; /* Espacio entre las líneas y el texto */
+}
+
+.fecha::before {
+    margin-left: 0; /* Para la línea izquierda */
+}
+
+.fecha::after {
+    margin-right: 0; /* Para la línea derecha */
+}
+
+.frase{
+    margin: 2rem 4rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    z-index: 0;
+}
+
+.frase p {
+    margin: 0;
+}
+
+.cuenta-regresiva{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: var(--color7);
+}
+
+.aros{
+    background: url('./img/AROS_RELOJ.SVG') center center no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;  
+    position: absolute;
+    z-index: 1;
+}
+
+.circulo{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 290px;
+    height: 290px;
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto 0;
+    z-index: -1;
+}
+
+.reloj{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.fista{
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aros-fiesta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-fiesta{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circulo-fiesta img{
+    height: 60%;
+    width: 60%;
+}
