@@ -1,12 +1,13 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@200;400&display=swap');
+
 :root {
+    --color0: #f0c0c4;
     --color1: #e3738c;
     --color2: #f2a3a9;
     --color3: #edbcb8;
     --color4: #efcdc4;
     --color5: #f2e1d9;
-    --color6: #b2ad8d;
+    --color6: #3D6239;
     --color7: #bec9a7;
 }
 
@@ -14,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color:var(--color7) ;
+    background-color: var(--color7);
 }
 
 .seccion {
@@ -22,6 +23,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     width: 100%;
     height: 110vh;
@@ -30,13 +32,13 @@ body {
 
 .seccion::after {
     content: '';
-    background-image: url('./img/separador.fondo.svg');
+    background-image: url('./img/separador-hero.png');
     position: absolute;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
-    width: 100%;
-    min-width: 100%;
-    height: 100%;  
+    width:100%;
+    height: 100%;
     box-sizing: border-box;
     bottom: 0;
     z-index: 1;
@@ -54,7 +56,8 @@ body {
     align-items: center;
     color: white;
     text-align: center;
-    z-index: 1; /* Trae el contenido al frente */
+    z-index: 1;
+    /* Trae el contenido al frente */
 }
 
 .capa {
@@ -63,17 +66,32 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Capa de oscurecimiento */
-    z-index: 0; /* Asegura que la capa de oscurecimiento esté detrás del contenido */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Capa de oscurecimiento */
+    z-index: 0;
+    /* Asegura que la capa de oscurecimiento esté detrás del contenido */
 }
 
-.flor-icon{
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    color: #fff;
-    position: relative;
-    z-index: 1;
+
+.flor-animada {
+    width: 30px;
+    /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    animation: girar 5s linear infinite;
+    /* Aplica la animación llamada "girar" */
+}
+
+/* Definición de la animación */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+        /* Inicio de la rotación: 0 grados */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Final de la rotación: 360 grados (una vuelta completa) */
+    }
 }
 
 h1 {
@@ -84,7 +102,7 @@ h1 {
     color: white;
     padding: 0.7rem 0;
     z-index: 1;
-    
+
 }
 
 h4 {
@@ -96,19 +114,21 @@ h4 {
 
 }
 
-.linea{
+.linea {
     border: #fff solid 1.5px;
     position: relative;
     width: 50%;
     margin: 0 auto;
     z-index: 1;
-    color:#fff;
+    color: #fff;
 }
+
 .fecha {
     font-family: 'Poppins', sans-serif;
     position: relative;
     font-size: 1.5rem;
-    color:#ffffff; /* Cambia al color que desees */
+    color: #ffffff;
+    /* Cambia al color que desees */
     margin: 20px 0;
     text-align: center;
     z-index: 1;
@@ -119,21 +139,27 @@ h4 {
     vertical-align: middle;
     content: '';
     display: inline-block;
-    width: 50px; /* Ancho de las líneas */
-    height: 2px; /* Grosor de las líneas */
-    background-color: #fff; /* Cambia al color que desees */
-    margin: 0 10px; /* Espacio entre las líneas y el texto */
+    width: 50px;
+    /* Ancho de las líneas */
+    height: 2px;
+    /* Grosor de las líneas */
+    background-color: #fff;
+    /* Cambia al color que desees */
+    margin: 0 10px;
+    /* Espacio entre las líneas y el texto */
 }
 
 .fecha::before {
-    margin-left: 0; /* Para la línea izquierda */
+    margin-left: 0;
+    /* Para la línea izquierda */
 }
 
 .fecha::after {
-    margin-right: 0; /* Para la línea derecha */
+    margin-right: 0;
+    /* Para la línea derecha */
 }
 
-.frase{
+.frase {
     margin: 2rem 4rem;
     display: block;
     justify-content: center;
@@ -146,7 +172,7 @@ h4 {
     margin: 0;
 }
 
-.cuenta-regresiva{
+.cuenta-regresiva {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,60 +180,303 @@ h4 {
     background-color: var(--color7);
 }
 
-.aros{
-    background: url('./img/AROS_RELOJ.SVG') center center no-repeat; 
+.aros {
+    background: url('./img/AROS_RELOJ.SVG') center center no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    height: fit-content;  
+    width: 350px;
+    height: 350px;
     position: absolute;
     z-index: 1;
 }
 
-.circulo{
+.circulo {
+    position: relative;
     background-color: #fff;
     border-radius: 50%;
-    width: 290px;
-    height: 290px;
-    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.40);
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: auto 0;
-    z-index: -1;
+    z-index: 0;
 }
 
-.reloj{
+.reloj {
     display: flex;
     justify-content: center;
-    
+
 }
 
-.fista{
-    height: 110vh;
+.fiesta {
+    height: 80vh;
+    background-color: var(--color7);
+
+}
+
+.aros-fiesta {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.aros-fiesta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.circulo-fiesta{
+.circulo-fiesta {
+    background-image: url('./img/aros-fiesta.svg');
     width: 150px;
     height: 150px;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.40);
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.40);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.circulo-fiesta img{
-    height: 60%;
+
+.circulo-fiesta img {
+    height: 50%;
+    width: 50%;
+}
+
+.icono-fiesta {
+    animation: secuencia-escala 2.5s ease-in-out infinite;
+    /* Aplica la animación compuesta */
+}
+
+@keyframes secuencia-escala {
+
+    0%,
+    100% {
+        transform: scale(.5);
+        transform-origin: left bottom;
+    }
+
+    50% {
+        transform: scale(1);
+        transform-origin: left bottom;
+    }
+}
+
+
+.titulo-fiesta {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo-fiesta h3 {
+    background-color: var(--color6);
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+
+.info-fiesta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--color6);
+}
+
+.btn-fiesta {
+    background-color: var(--color1) !important;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
     width: 60%;
+    padding: 0.2rem 0.4rem;
+}
+
+.btn-fiesta:hover {
+    background-color: var(--color2) !important;
+    color: #fff;
+
+}
+
+.contenido img {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-music {
+    width: 50px;
+    /* Ajusta el tamaño del botón según tus necesidades */
+    height: 50px;
+    /* Ajusta el tamaño del botón según tus necesidades */
+    background-color: rgba(240, 192, 196, 0.4);
+    /* Fondo borroso de color rosado */
+    border: none;
+    /* Sin bordes */
+    border-radius: 50%;
+    /* Hace que el botón sea redondo */
+    cursor: pointer;
+    overflow: hidden;
+    /* Oculta el desbordamiento del icono */
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior */
+    right: 20px;
+    z-index: 1;
+}
+
+.btn-music img {
+    width: 80%;
+    /* Ajusta el tamaño del icono para que se ajuste al botón */
+    height: auto;
+}
+
+/* ----------------------------------------------
+  Generated by AnimatiSS
+  Licensed under FreeBSD License
+  URL: https://xsgames.co/animatiss
+  Twitter: @xsgames_
+---------------------------------------------- */
+
+.btn-music img {
+    animation: shake-left-right 2.7s linear infinite
+}
+
+@keyframes shake-left-right {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%
+    }
+
+    10% {
+        transform: rotate(8deg)
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg)
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg)
+    }
+
+    80% {
+        transform: rotate(-8deg)
+    }
+
+    90% {
+        transform: rotate(8deg)
+    }
+}
+
+.galeria {
+    top: 10;
+    padding: 8rem 0;
+    width: 100%!important;
+    background-image: url(./img/fondo-galeria.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: var(--color7);
+    height: 90vh;
+}
+
+.marco-carrusel {
+    width: 100%;
+    /* Ancho deseado del marco polaroid */
+    height: 200px;
+    /* Altura deseada del marco polaroid */
+    background: transparent;
+    padding: 0 2rem;
+    /* Espacio interior */
+    margin: 1rem auto;
+    /* Centrar horizontalmente */
+   
+    /* Sombra suave */
+}
+
+.foto-carrusel {
+    color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-top: 8px solid #fff;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+    border-bottom: 50px solid #fff;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 1rem auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+
+}
+
+.seccion-fiesta{
+    height: 80vh;
+    background-color: var(--color4);
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.seccion-fiesta::after{
+    content: '';
+    background-image: url(./img/separador-after.svg);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width:100%;
+    height: 80vh;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.card{
+    margin: 1rem auto;
+    background-color: #fff!important;
+    border-radius: 10px!important;
+}
+
+.card img{
+    margin: 1.5rem auto;
+}
+
+.card-body{
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.card-text{
+    height: 3rem;
+}
+
+.btn-card{
+    background-color: var(--color1) !important;
+    border: none;
+    font-weight: bold;
+    color: #fff!important;
+    border-radius: 20px!important;
+    width: 70%;
+    padding: 0.2rem 0.4rem;
 }

@@ -8,8 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <title>Tarjeta de Quince Años</title>
   </head>
   <body>
@@ -17,25 +16,25 @@
       <div class="contenido">
         <div class="capa"></div>
         <div>
+          <img src="./img/klipartz.com.png" width="40px">
           <p class="fecha">04-11-2023</p>
         </div>
         <div>
           <h1>Florencia</h1>
-        <h4>Mis 15 años</h4>
-        <div class="linea"></div>
+          <h4>Mis 15 años</h4>
+          <div class="linea"></div>
         </div>
         <div class="frase">
-          <span class="comilla"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg></span>
+          <img src="./img/doble-comillas.png" width="50px"
+            style="transform: rotate(180deg);">
           <p>
             En este cuento de hadas, hoy me toca a mí sentirme como una
             princesa... te espero para que seas parte de este cuento feliz,
             inolvidable y mágico.
           </p>
-          <span class="comilla"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"/></svg></span>
+          <img src="./img/doble-comillas.png" width="50px">
         </div>
-        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-chevron-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg></span>
+        <img src="./img/boton-de-expansion.png" width="60px">
       </div>
     </section>
     <section class="cuenta-regresiva">
@@ -62,9 +61,7 @@
               </div>
             </div>
             <div>
-                <span style="margin:1rem"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                  </svg></span>
+              <img class='flor-animada' src="./img/flor-verde.png" width="30px">
             </div>
           </div>
         </div>
@@ -73,16 +70,134 @@
     <section class="fiesta">
       <div class="aros-fiesta">
         <div class="circulo-fiesta">
-          <img src="./img/papel-picado.png" width="100px">
+          <img class='icono-fiesta' src="./img/papel-picado.png" width="100px">
         </div>
       </div>
-      <h3 class="text-center my-4">Fiesta</h3>
+      <div class="titulo-fiesta">
+        <img src="./img/cinta.svg" width="16px"
+          style="transform: rotate(180deg);">
+        <h3 class="text-center my-4">Fiesta</h3>
+        <img src="./img/cinta.svg" width="16px">
+      </div>
+      <div class="info-fiesta">
+        <h5>Dia</h5>
+        <p>Sabado 4 de Noviembre</p>
+        <button class="btn-fiesta">AGENDAR</button>
+      </div>
+      <div class="info-fiesta">
+        <h5>Lugar</h5>
+        <p>Salon avrile</p>
+        <button class="btn-fiesta" data-bs-toggle="modal"
+          data-bs-target="#modalAsistencia">CONFIRMAR ASISTENCIA</button>
+        <!-- modal confirmar asistencia -->
+        <div class="modal fade" id="modalAsistencia" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                  data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-fiesta">
+        <h5>Direccion</h5>
+        <p>Ayacucho 861</p>
+        <button class="btn-fiesta">COMO LLEGAR?</button>
+      </div>
     </section>
+    <section class="galeria">
+      <h2>Un recorrido de estos 15 años</h2>
+      <img src="./img/camara.png" width="40px">
+      <div class="marco-carrusel">
+        <div id="carouselExampleAutoplaying" class="carousel slide"
+          data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/1.jpeg.jpg);">.</div>
+              <!-- <img src="./img/carrousel/1.jpeg.jpg" class="d-block w-100 foto-carrusel"> -->
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/2.jpg);">.</div>
+              <!-- <img src="./img/carrousel/2.jpg" class="d-block w-100 foto-carrusel"> -->
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/3.jpg);">.</div>
+              <!-- <img src="./img/carrousel/3.jpg" class="d-block w-100 foto-carrusel"> -->
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/4.jpg);">.</div>
+              <!-- <img src="./img/carrousel/4.jpg" class="d-block w-100 foto-carrusel"> -->
+            </div>
+            <div class="carousel-item">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/5.jpeg.jpg);">.</div>
+              <!-- <img src="./img/carrousel/5.jpeg.jpg" class="d-block w-100 foto-carrusel"> -->
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="seccion-fiesta">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Música</h5>
+          <img src="./img/musica.png" width="50px">
+          <p class="card-text">
+            ¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
+          <a href="#" class="btn btn-card">SUGERIR CANCIÓN</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Dress Code</h5>
+          <img src="./img/dress-code.png" width="50px">
+          <p class="card-text">Una orientacion para el vestuario.</p>
+          <a href="#" class="btn btn-card">VER MÁS</a>
+        </div>
+      </div>
+    </section>
+    <div id="controlMusica">
+      <button class="btn-music"><img src="./img/nota-musical.png" width="100%"></button>
+    </div>
     <script src="app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
