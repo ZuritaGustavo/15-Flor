@@ -12,6 +12,22 @@
     <title>Tarjeta de Quince Años</title>
   </head>
   <body>
+    <audio id="miAudio" class="d-none" controls>
+      <source src="./music/Titanium (Instrumental) (192 kbps).mp3" type="audio/mpeg">
+  </audio>
+    <div id="modal-principal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content modal-principal">
+          <div class="modal-body">
+            <h2>Bienvenidos a la invitacion de Flor</h2>
+            <div class="botones-modal">
+              <button id="boton-play" class="btn-modal">Ingresar con música</button>
+              <button id="boton-cerrar"class="btn-modal">Ingresar sin música</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="seccion">
       <div class="contenido">
         <div class="capa"></div>
@@ -136,27 +152,22 @@
             <div class="carousel-item active">
               <div class="foto-carrusel"
                 style="background-image: url(./img/carrousel/1.jpeg.jpg);">.</div>
-              <!-- <img src="./img/carrousel/1.jpeg.jpg" class="d-block w-100 foto-carrusel"> -->
             </div>
             <div class="carousel-item">
               <div class="foto-carrusel"
                 style="background-image: url(./img/carrousel/2.jpg);">.</div>
-              <!-- <img src="./img/carrousel/2.jpg" class="d-block w-100 foto-carrusel"> -->
             </div>
             <div class="carousel-item">
               <div class="foto-carrusel"
                 style="background-image: url(./img/carrousel/3.jpg);">.</div>
-              <!-- <img src="./img/carrousel/3.jpg" class="d-block w-100 foto-carrusel"> -->
             </div>
             <div class="carousel-item">
               <div class="foto-carrusel"
-                style="background-image: url(./img/carrousel/4.jpg);">.</div>
-              <!-- <img src="./img/carrousel/4.jpg" class="d-block w-100 foto-carrusel"> -->
+                style="background-image: url(./img/carrousel/4.jpg);">.</div>  
             </div>
             <div class="carousel-item">
               <div class="foto-carrusel"
-                style="background-image: url(./img/carrousel/5.jpeg.jpg);">.</div>
-              <!-- <img src="./img/carrousel/5.jpeg.jpg" class="d-block w-100 foto-carrusel"> -->
+                style="background-image: url(./img/carrousel/5.jpeg.jpg);">.</div>              
             </div>
           </div>
           <button class="carousel-control-prev" type="button"
@@ -191,8 +202,22 @@
         </div>
       </div>
     </section>
+    <section class="instagram">
+      <div class="capa-insta"></div>
+      <div class="texto-insta">
+        <h3>
+          Una gran fiesta junto a vos
+        </h3>
+        <p>
+          Compartí tus fotos y videos de ese hermoso día
+        </p>
+        <img src="./img/instagram.png" width="60px">
+        <h2>#15Flor</h2>
+        <button class="btn-insta">Ver en Instagram</button>
+      </div>
+    </section>
     <div id="controlMusica">
-      <button class="btn-music"><img src="./img/nota-musical.png" width="100%"></button>
+      <button id='botonPause'class="btn-music"><img src="./img/nota-musical.png" width="100%"></button>
     </div>
     <script src="app.js"></script>
     <script

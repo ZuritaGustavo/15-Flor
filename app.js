@@ -1,4 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const myModal = new bootstrap.Modal(document.getElementById('modal-principal'))
+    myModal.show();
+    const btnPause = document.getElementById("botonPause");
+    const miAudio = document.getElementById("miAudio");
+    const btnPlay = document.getElementById("boton-play");
+    const btnCerrar =  document.getElementById("boton-cerrar");
+    let isPlaying = false;
+    btnPlay.addEventListener("click", ()=>{
+        miAudio.play();
+      myModal.hide();
+    })
+
+    btnCerrar.addEventListener("click", ()=>{
+      myModal.hide();
+    })
+    btnPause.addEventListener("click", ()=>{
+        if (isPlaying) {
+            miAudio.pause();
+            isPlaying = false;
+        } else {
+            miAudio.play();
+            isPlaying = true;
+
+        }
+    })
+
+    miAudio.addEventListener("ended", function() {
+        isPlaying = false;
+    });
     // Fecha programada (descomenta esta línea y ajusta la fecha según tu necesidad)
      var fechaProgramada = new Date('2023-11-04T22:00:00');
 
