@@ -9,6 +9,10 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Tarjeta de Quince Años</title>
   </head>
   <body>
@@ -54,7 +58,7 @@
       </div>
     </section>
     <section class="cuenta-regresiva">
-      <div class="d-flex justify-content-center align-items-center">
+      <div id='cuenta-regresiva' class="d-flex justify-content-center align-items-center animate__bounceIn">
         <div class="aros">
           <div class="circulo text-center">
             <h6 class="fs-3 mb-0">Faltan</h6>
@@ -151,10 +155,10 @@
         <button class="btn-fiesta" data-bs-toggle="modal"
         data-bs-target="#modalMapa">COMO LLEGAR?</button>
         <div class="modal" tabindex="-1" role="dialog" id="modalMapa">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header border-0 d-flex flex-column ">
-                  <img src="./img/papel-picado.png" width="50px">
+                  <img src="./img/ubicacion.png" width="50px">
                   <h1 class="modal-title fs-5 ">Lugar de la Fiesta</h1>
                 </div>
                 <div class="modal-body">
@@ -216,15 +220,14 @@
           <img src="./img/musica.png" width="50px">
           <p class="card-text">
             ¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
-          <a href="#" class="btn btn-card">SUGERIR CANCIÓN</a>
+          <a href="https://open.spotify.com/playlist/0BKTyKLLVNqk3PeHb0TH9y?si=ccb44c48b1d04151&pt=9e9a2d4cb779fb712100c5ead66a955d" class="btn btn-card">SUGERIR CANCIÓN</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Dress Code</h5>
           <img src="./img/dress-code.png" width="50px">
-          <p class="card-text">Una orientacion para el vestuario.</p>
-          <a href="#" class="btn btn-card">VER MÁS</a>
+          <h5 class="card-text">Formal - Gala</h5>
         </div>
       </div>
     </section>

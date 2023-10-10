@@ -29,6 +29,32 @@ document.addEventListener("DOMContentLoaded", function() {
         isPlaying = false;
     });
 
+    function handleAnimation(entries, observer) {
+        entries.forEach((entry) => {
+            const element = entry.target;
+    
+            if (entry.isIntersecting) {
+                element.classList.add("fade-in"); // Agrega clase para fade in
+                element.classList.remove("fade-out");
+            } else {
+                element.classList.remove("fade-in");
+                element.classList.add("fade-out"); // Agrega clase para fade out
+            }
+        });
+    }
+    
+    // Crear una instancia de Intersection Observer
+    const observer = new IntersectionObserver(handleAnimation, {
+        threshold: 0.5 // Umbral de visibilidad (50% del elemento visible)
+    });
+    
+    // Seleccionar el elemento que se animará
+    const aros = document.querySelector(".aros");
+    
+    // Observar el elemento
+    observer.observe(aros);
+
+    
     const btnAgendar = document.getElementById("btn-agendar");
 
     btnAgendar.addEventListener("click", function() {
@@ -48,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.open(urlGoogleCalendar, "_blank");
     });
 
-    const formulario = document.getElementById("form-asistencia");
     const enviarBtn = document.getElementById("enviar");
  
     // Agrega un evento click al botón de envío
