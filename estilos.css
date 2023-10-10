@@ -70,6 +70,10 @@ text-align: center;
     width: 100%;
     height: 110vh;
     overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    outline: none;
 }
 
 .seccion::after {
@@ -79,10 +83,10 @@ text-align: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
-    width: 100%;
+    width: 101%;
     height: 100%;
     box-sizing: border-box;
-    bottom: 0;
+    bottom: -2px;
     z-index: 1;
 }
 
@@ -210,6 +214,8 @@ h4 {
     align-items: center;
     height: 50vh;
     background-color: var(--color7);
+    position: relative;
+    top: -1px;
 }
 
 .aros {
@@ -247,7 +253,8 @@ h4 {
 .fiesta {
     height: 80vh;
     background-color: var(--color7);
-
+    position: relative;
+    top: -2px;
 }
 
 .aros-fiesta {
@@ -316,6 +323,45 @@ h4 {
     align-items: center;
     text-align: center;
     color: var(--color6);
+}
+
+.modal-header h1{
+    color: var(--color1);
+}
+
+
+.input-nombre{
+    margin: 0 auto !important;
+    border-top: none!important;
+    border-left: none!important;
+    border-right: none!important;
+    border-radius: 0!important;
+    width: 70%!important;
+    outline-color: var(--color1)!important;
+}
+.form-control:focus {
+    border-color: #e3738c!important; /* Cambia el color al valor deseado (#e3738c en este caso) */
+    box-shadow: 0 0 0 0.2rem rgba(227, 115, 140, 0.25)
+    !important; 
+    border-bottom: none!important;/* Cambia el sombreado a rojo o el color que desees */
+}
+.form-check-input:checked {
+    background-color: #e3738c!important; /* Cambia el color del fondo cuando está seleccionado */
+    border-color: #e3738c!important; /* Cambia el color del borde cuando está seleccionado */
+}
+.text-detalle{
+    margin: 0 auto !important;
+    border-top: none!important;
+    border-left: none!important;
+    border-right: none!important;
+    border-radius: 0!important;
+    outline: none!important;
+    resize: none!important;
+    width: 70%!important;
+}
+
+.modal-content{
+    border:2px var(--color1) solid!important;
 }
 
 .btn-fiesta {
@@ -398,6 +444,8 @@ h4 {
 }
 
 .galeria {
+    position: relative;
+    top: -3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -444,6 +492,7 @@ h4 {
 }
 
 .seccion-fiesta {
+    top: -3px;
     padding: 7rem 0;
     display: flex;
     flex-direction: column;
@@ -478,6 +527,7 @@ h4 {
     z-index: 1;
 }
 .instagram {
+    top: -5px;
     z-index: -1;
     position: relative;
     background-image: url(./img/insta.jpg);
@@ -496,7 +546,7 @@ h4 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
-    width: 100%;
+    width: 101%;
     height: 100vh;
     box-sizing: border-box;
     top:0;
@@ -512,7 +562,7 @@ h4 {
     background-repeat: no-repeat;
     background-position: top;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     box-sizing: border-box;
     bottom:0;
     left: 0;

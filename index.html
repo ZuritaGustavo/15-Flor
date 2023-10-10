@@ -98,7 +98,7 @@
       <div class="info-fiesta">
         <h5>Día</h5>
         <p>4 de Noviembre 22Hs</p>
-        <button class="btn-fiesta">AGENDAR</button>
+        <button id='btn-agendar'class="btn-fiesta">AGENDAR</button>
       </div>
       <div class="info-fiesta">
         <h5>Lugar</h5>
@@ -110,27 +110,36 @@
           aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                  aria-label="Close"></button>
+              <div class="modal-header border-0 d-flex flex-column ">
+                <img src="./img/papel-picado.png" width="50px">
+                <h1 class="modal-title fs-5 ">Confirmar Asistencia</h1>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="form-asistencia">
+                  <div class="form-group d-flex justify-content-center mb-3 mt-2">
+                    <div class="form-check mx-1">
+                        <input class="form-check-input" type="radio" name="confirmo" id="inputSi" value="si" checked>
+                        <label class="form-check-label" for="inputSi">
+                            Si, confirmo!
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input mx-1" type="radio" name="confirmo" id="inputNo" value="no">
+                        <label class="form-check-label" for="inputNo">
+                            No puedo
+                        </label>
+                    </div>
+                </div>
                   <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Nombre y apellido:</label>
-                    <input type="text" class="form-control" id="recipient-name">
+                    <input type="text" class="form-control input-nombre text-center" id="recipient-name" placeholder="Ingrese su nombre completo">
                   </div>
                   <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Algun detalle que deba tener en cuenta:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea class="form-control text-detalle text-center" id="message-text" rows="2" cols="50" maxlength="250"  placeholder="Ingrese algun dato importante. Ej: soy vegetariano"></textarea>
                   </div>
                 </form>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                  data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Enviar</button>
+              <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" id='enviar'class="btn-fiesta">Enviar</button>
               </div>
             </div>
           </div>
@@ -139,7 +148,27 @@
       <div class="info-fiesta">
         <h5>Dirección</h5>
         <p>Jorge Luis Borges 3091</p>
-        <button class="btn-fiesta">COMO LLEGAR?</button>
+        <button class="btn-fiesta" data-bs-toggle="modal"
+        data-bs-target="#modalMapa">COMO LLEGAR?</button>
+        <div class="modal" tabindex="-1" role="dialog" id="modalMapa">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Ubicación en el Mapa</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Aquí se mostrará el mapa -->
+                      <iframe src="https://maps.app.goo.gl/xVPXvtdaEPuU4SzL6" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
       </div>
     </section>
     <section class="galeria">

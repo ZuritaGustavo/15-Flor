@@ -28,6 +28,51 @@ document.addEventListener("DOMContentLoaded", function() {
     miAudio.addEventListener("ended", function() {
         isPlaying = false;
     });
+
+    const btnAgendar = document.getElementById("btn-agendar");
+
+    btnAgendar.addEventListener("click", function() {
+        const fechaEvento = new Date("2023-11-04T22:00:00");
+
+        // Formatea la fecha y hora para que Google Calendar la entienda
+        const fechaFormateada = fechaEvento.toISOString().replace(/-|:|\.\d+/g, "");
+
+        // Nombre y dirección del evento
+        const nombreEvento = "Fiesta de 15 Flor";
+        const direccionEvento = "Jorge Luis Borges 3091, Yerba Buena, Tucumán";
+
+        // URL para agregar el evento a Google Calendar
+        const urlGoogleCalendar = `https://www.google.com/calendar/render?action=TEMPLATE&text=${nombreEvento}&dates=${fechaFormateada}/${fechaFormateada}&details=${direccionEvento}`;
+
+        // Abre la página de Google Calendar en una nueva pestaña
+        window.open(urlGoogleCalendar, "_blank");
+    });
+
+    const formulario = document.getElementById("form-asistencia");
+    const enviarBtn = document.getElementById("enviar");
+ 
+    // Agrega un evento click al botón de envío
+    enviarBtn.addEventListener("click", function() {
+        // Obtiene los valores de los campos del formulario
+        const confirmo = document.querySelector('input[name="confirmo"]:checked').value;
+        let mensaje=''
+        if(confirmo == 'si'){
+            mensaje = 'Confirmo mi asistencia!';
+        }else{
+            mensaje = 'No podre asistir :( espero que pases una hermosa noche';
+        }
+        const nombre = document.getElementById("recipient-name").value;
+        const detalle = document.getElementById("message-text").value;
+ 
+        // Construye la URL de la API de WhatsApp con los datos
+        const apiURL = `https://api.whatsapp.com/send?phone=+5493816016292&text=Confirmación:${mensaje}%0A%0ANombre:${nombre}%0A%0ADetalle:${detalle}`;
+ 
+        // Redirige a la URL de la API de WhatsApp
+        window.location.href = apiURL;
+    });
+
+
+
     // Fecha programada (descomenta esta línea y ajusta la fecha según tu necesidad)
      var fechaProgramada = new Date('2023-11-04T22:00:00');
 
@@ -60,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         tiempoRestante -= 1000; // Restar 1 segundo
     }
+
 
     actualizarCuentaRegresiva(); // Actualizar la cuenta regresiva inmediatamente
 
