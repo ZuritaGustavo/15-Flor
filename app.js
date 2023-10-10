@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Nombre y dirección del evento
         const nombreEvento = "Fiesta de 15 Flor";
-        const direccionEvento = "Jorge Luis Borges 3091, Yerba Buena, Tucumán";
+        const direccionEvento = "C.Jorge Luis Borges 3091, Yerba Buena, Tucumán";
 
         // URL para agregar el evento a Google Calendar
-        const urlGoogleCalendar = `https://www.google.com/calendar/render?action=TEMPLATE&text=${nombreEvento}&dates=${fechaFormateada}/${fechaFormateada}&details=${direccionEvento}`;
+        const urlGoogleCalendar = `https://www.google.com/calendar/render?action=TEMPLATE&text=${nombreEvento}&dates=${fechaFormateada}/${fechaFormateada}&location=${direccionEvento}`;
 
         // Abre la página de Google Calendar en una nueva pestaña
         window.open(urlGoogleCalendar, "_blank");
