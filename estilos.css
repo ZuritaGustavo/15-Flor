@@ -30,8 +30,8 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0!important;
+    padding: 0!important;
     background-color: var(--color7);
 }
 
@@ -218,9 +218,20 @@ body {
     width: 350px;
     height: 350px;
     position: relative;
+     /* opacity: 0;  */
+    transition: opacity 0.5s ease-in-out;
 }
 
-.cuenta-regresiva--aros.circulo{
+.cuenta-regresiva--aros.fade-in {
+    opacity: 1;
+}
+
+/* Agrega animación de fade out */
+.cuenta-regresiva--aros.fade-out {
+    opacity: 0;
+}
+
+.cuenta-regresiva--aros .circulo{
     background-color: #fff;
     background-image: none;
     border-radius: 50%;
@@ -235,12 +246,12 @@ body {
     position: absolute;
     z-index: 0;
 }
-.cuenta-regresiva--aros.circulo h6{
+.cuenta-regresiva--aros .circulo h6{
     font-size: 1.7rem;
     font-family: var(--fuente-titulo);
     font-weight: 400;
 }
-.cuenta-regresiva--aros.reloj{
+.cuenta-regresiva--aros .reloj{
     display: flex;
     justify-content: center;
     background-image: none;
@@ -267,7 +278,7 @@ body {
 
 
 .fiesta {
-    height: 80vh;
+    height: 100vh;
     background-color: var(--color7);
     position: relative;
     top: 0;
@@ -548,27 +559,26 @@ font-family: var(--fuente-parrafo);
 }
 
 .regalo {
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color:var(--color7);
+    top: 0;
+    padding-bottom: 3rem;
 }
 
 .regalo::before {
     content: '';
     background-image: url(./img/separador-after.svg);
-    position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     box-sizing: border-box;
-    top: 0;
-    z-index: 1;
 }
 .regalo h1{
     color: var(--color6);
@@ -577,18 +587,9 @@ font-family: var(--fuente-parrafo);
 .regalo p{
     color: var(--color6);
     font-family: var(--fuente-parrafo);
+    text-align: center;
 }
-.regalo::after {
-    content: '';
-    position: relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    width: 100%;
-    height: 60vh;
-    box-sizing: border-box;
-    bottom: 0;
-}
+
 .regalo .modal-body{
     font-family: var(--fuente-parrafo);
 }
@@ -596,10 +597,10 @@ font-family: var(--fuente-parrafo);
 .instagram {
     top: 0;
     left: 0;
-    z-index: -1;
+   
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/insta.jpg');
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -610,33 +611,29 @@ font-family: var(--fuente-parrafo);
 
 .instagram::before {
     content: '';
-    background-image: url(./img/separador.fondo.svg)!important;
     position: absolute;
+    background-image: url(./img/instagram-before.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     box-sizing: border-box;
-    bottom: 0;
+    top: 0;
     left: 0;
-    z-index: 0;
-    transform: rotate(180deg);
 }
 
 .instagram--texto {
     font-family: var(--fuente-parrafo);
     list-style: none;
     text-align: center;
-    position: absolute;
     color: #fff;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 .instagram--texto h3{
     font-size: 1.5rem;
@@ -651,7 +648,13 @@ footer{
     background-color: var(--color6);
     color: #fff;
     font-family: var(--fuente-parrafo);
-    height: 5vh;
+    height: auto;
     text-align: center;
     padding: 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+.fade-in-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }

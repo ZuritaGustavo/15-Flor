@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Seleccionar el elemento que se animará
-    const aros = document.querySelector(".cuenta--regresiva--aros");
+    const aros = document.querySelector('.cuenta-regresiva--aros');
 
     // Observar el elemento
-    observer.observe(aros);
+    observer.observe(aros); 
 
 
     const btnAgendar = document.getElementById("btn-agendar");
@@ -134,47 +134,51 @@ document.addEventListener("DOMContentLoaded", function () {
         // Redirige a la URL de la API de WhatsApp
         window.location.href = apiURL;
     });
+    const enviarCancion = document.getElementById('enviarCancion');
+    enviarCancion.addEventListener("click", function () {
+        // Obtiene los valores de los campos del formulario
+        const nombre = document.getElementById('nombre').value;
+        let mensaje = ''
+        if (confirmo == 'si') {
+            mensaje = 'Confirmo mi asistencia!';
+        } else {
+            mensaje = 'No podre asistir :( espero que pases una hermosa noche';
+        }
+        const cancion = document.getElementById("cancion").value;
+        const link = document.getElementById("link").value;
 
+        // Construye la URL de la API de WhatsApp con los datos
+        const apiURL = `https://api.whatsapp.com/send?phone=+5493816016292&text=Nombre:${nombre}%0A%0ACancion:${cancion}%0A%0ALink:${link}`;
 
-
+        // Redirige a la URL de la API de WhatsApp
+        window.location.href = apiURL;
+    });
 
     function animateElement(element) {
-        // Agregar estilos CSS para la animación de entrada
-        element.style.opacity = "0";
-        element.style.transition = "opacity 0.5s ease-in-out";
-
         // Función para manejar la animación de entrada
         function handleAnimationIn(entries, observer) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    element.style.opacity = "1"; // Mostrar el elemento
+                    element.classList.add("fade-in");
+                    element.classList.remove("fade-out");
+                } else {
+                    element.classList.remove("fade-in");
+                    element.classList.add("fade-out");
                 }
             });
         }
-
-        // Función para manejar la animación de salida
-        function handleAnimationOut(entries, observer) {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                    element.style.opacity = "0"; // Ocultar el elemento
-                }
-            });
-        }
-
+    
         // Crear una instancia de Intersection Observer para animación de entrada
         const observerIn = new IntersectionObserver(handleAnimationIn, {
             threshold: 0.5 // Umbral de visibilidad (50% del elemento visible)
         });
-
-        // Crear una instancia de Intersection Observer para animación de salida
-        const observerOut = new IntersectionObserver(handleAnimationOut, {
-            threshold: 0.5 // Umbral de visibilidad (50% del elemento visible)
-        });
-
+    
         // Observar el elemento para animación de entrada
         observerIn.observe(element);
-
-        // Observar el elemento para animación de salida
-        observerOut.observe(element);
     }
+    
+    const cuentaAros = document.querySelector('.cuenta-regresiva--aros');
+    animateElement(cuentaAros);
+
+    
 });
