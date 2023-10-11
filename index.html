@@ -9,42 +9,42 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-      <link
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Tarjeta de Quince Años</title>
   </head>
   <body>
     <audio id="miAudio" class="d-none" controls>
-      <source src="./music/Titanium (Instrumental) (192 kbps).mp3" type="audio/mpeg">
-  </audio>
+      <source src="./music/Titanium (Instrumental) (192 kbps).mp3"
+        type="audio/mpeg">
+    </audio>
     <div id="modal-principal" class="modal fade" tabindex="-1">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content modal-principal">
           <div class="modal-body">
             <h2>Bienvenidos a la invitacion de Flor</h2>
             <div class="botones-modal">
-              <button id="boton-play" class="btn-modal">Ingresar con música</button>
-              <button id="boton-cerrar"class="btn-modal">Ingresar sin música</button>
+              <button id="boton-play" class="btn-rosa my-2">Ingresar con música</button>
+              <button id="boton-cerrar" class="btn-rosa my-2">Ingresar sin música</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <section class="seccion">
-      <div class="contenido">
-        <div class="capa"></div>
-        <div>
+    <section class="hero">
+      <div class="hero--capa"></div>
+      <div class="hero--presentacion">
+        <div class="hero--fecha">
           <img src="./img/klipartz.com.png" width="40px">
-          <p class="fecha">04-11-2023</p>
+          <p>04-11-2023</p>
         </div>
-        <div>
+        <div class="hero--titulo">
           <h1>Florencia</h1>
           <h4>Mis 15 años</h4>
           <div class="linea"></div>
         </div>
-        <div class="frase">
+        <div class="hero--frase">
           <img src="./img/doble-comillas.png" width="50px"
             style="transform: rotate(180deg);">
           <p>
@@ -54,15 +54,16 @@
           </p>
           <img src="./img/doble-comillas.png" width="50px">
         </div>
-        <img class="bajar" src="./img/boton-de-expansion.png" width="60px">
+        <div class="hero--flecha">
+          <img src="./img/boton-de-expansion.png" width="60px">
+        </div>
       </div>
     </section>
-    <section class="cuenta-regresiva">
-      <div id='cuenta-regresiva' class="d-flex justify-content-center align-items-center animate__bounceIn">
-        <div class="aros">
-          <div class="circulo text-center">
-            <h6 class="fs-3 mb-0">Faltan</h6>
-            <div class="reloj">
+    <section id='cuenta-regresiva' class="cuenta-regresiva">
+        <div class="cuenta-regresiva--aros">
+          <div class="cuenta-regresiva--aros circulo">
+            <h6>Faltan</h6>
+            <div class="cuenta-regresiva--aros reloj">
               <div class="d-flex flex-column text-center border-end fs-3 w-25">
                 <span class="numero dias">12</span>
                 <span class="texto">días</span>
@@ -80,34 +81,33 @@
                 <span class="texto">seg</span>
               </div>
             </div>
-            <div>
-              <img class='flor-animada' src="./img/flor-verde.png" width="30px">
+            <div class="cuenta-regresiva--flor">
+              <img src="./img/flor-verde.png" width="30px">
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="fiesta">
-      <div class="aros-fiesta">
-        <div class="circulo-fiesta">
-          <img class='icono-fiesta' src="./img/papel-picado.png" width="100px">
+      <div class="fiesta--aros">
+        <div class="fiesta--circulo">
+          <img src="./img/papel-picado.png" width="100px">
         </div>
       </div>
-      <div class="titulo-fiesta">
+      <div class="fiesta--titulo">
         <img src="./img/cinta.svg" width="16px"
           style="transform: rotate(180deg);">
         <h3 class="text-center my-4">Fiesta</h3>
         <img src="./img/cinta.svg" width="16px">
       </div>
-      <div class="info-fiesta">
+      <div class="fiesta--info">
         <h5>Día</h5>
         <p>4 de Noviembre 22Hs</p>
-        <button id='btn-agendar'class="btn-fiesta">AGENDAR</button>
+        <button id='btn-agendar' class="btn-rosa">AGENDAR</button>
       </div>
-      <div class="info-fiesta">
+      <div class="fiesta--info">
         <h5>Lugar</h5>
-        <p>Salón Keké Yerba Buena (Club Las Lomitas)</p>
-        <button class="btn-fiesta" data-bs-toggle="modal"
+        <p>Salón Keké Yerba Buena<br>(Club Las Lomitas)</p>
+        <button class="btn-rosa" data-bs-toggle="modal"
           data-bs-target="#modalAsistencia">CONFIRMAR ASISTENCIA</button>
         <!-- modal confirmar asistencia -->
         <div class="modal fade" id="modalAsistencia" tabindex="-1"
@@ -115,71 +115,87 @@
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header border-0 d-flex flex-column ">
-                <img src="./img/papel-picado.png" width="50px">
-                <h1 class="modal-title fs-5 ">Confirmar Asistencia</h1>
+                <img src="./img/papel-picado-rosa.png" width="50px">
+                <h1 class="modal-title fs-5">Confirmar Asistencia</h1>
               </div>
               <div class="modal-body">
                 <form id="form-asistencia">
-                  <div class="form-group d-flex justify-content-center mb-3 mt-2">
+                  <div
+                    class="form-group d-flex justify-content-center mb-3 mt-2">
                     <div class="form-check mx-1">
-                        <input class="form-check-input" type="radio" name="confirmo" id="inputSi" value="si" checked>
-                        <label class="form-check-label" for="inputSi">
-                            Si, confirmo!
-                        </label>
+                      <input class="form-check-input" type="radio"
+                        name="confirmo" id="inputSi" value="si" checked>
+                      <label class="form-check-label" for="inputSi">
+                        Si, confirmo!
+                      </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input mx-1" type="radio" name="confirmo" id="inputNo" value="no">
-                        <label class="form-check-label" for="inputNo">
-                            No puedo
-                        </label>
+                      <input class="form-check-input mx-1" type="radio"
+                        name="confirmo" id="inputNo" value="no">
+                      <label class="form-check-label" for="inputNo">
+                        No puedo
+                      </label>
                     </div>
-                </div>
-                  <div class="mb-3">
-                    <input type="text" class="form-control input-nombre text-center" id="recipient-name" placeholder="Ingrese su nombre completo">
                   </div>
                   <div class="mb-3">
-                    <textarea class="form-control text-detalle text-center" id="message-text" rows="2" cols="50" maxlength="250"  placeholder="Ingrese algun dato importante. Ej: soy vegetariano"></textarea>
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="recipient-name"
+                      placeholder="Ingrese su nombre completo">
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control text-detalle text-center"
+                      id="message-text" rows="2" cols="50" maxlength="250"
+                      placeholder="Ingrese algun dato importante. Ej: soy vegetariano"></textarea>
                   </div>
                 </form>
               </div>
               <div class="modal-footer d-flex justify-content-center border-0">
-                <button type="button" id='enviar'class="btn-fiesta">Enviar</button>
+                <button type="button" id='enviar' class="btn-rosa">Enviar</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="info-fiesta">
+      <div class="fiesta--info">
         <h5>Dirección</h5>
         <p>Jorge Luis Borges 3091</p>
-        <button class="btn-fiesta" data-bs-toggle="modal"
-        data-bs-target="#modalMapa">COMO LLEGAR?</button>
+        <button class="btn-rosa" data-bs-toggle="modal"
+          data-bs-target="#modalMapa">COMO LLEGAR?</button>
         <div class="modal" tabindex="-1" role="dialog" id="modalMapa">
           <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header border-0 d-flex flex-column ">
-                  <img src="./img/ubicacion.png" width="50px">
-                  <h1 class="modal-title fs-5 ">Lugar de la Fiesta</h1>
-                </div>
-                <div class="modal-body">
-                  <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=C.Jorge%20luis%20borges%203091,%20yerba%20buena,%20tucuman+(Club%20las%20lomitas)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>
-                </div>
-                <div class="modal-footer d-flex justify-content-center border-0">
-                  <button type="button"data-bs-dismiss="modal" class="btn-fiesta">Cerrar</button>
-                </div>
+            <div class="modal-content">
+              <div class="modal-header border-0 d-flex flex-column ">
+                <img src="./img/ubicacion.png" width="50px">
+                <h1 class="modal-title fs-5 ">Lugar de la Fiesta</h1>
               </div>
+              <div class="modal-body">
+                <div style="width: 100%"><iframe width="100%" height="400"
+                    frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=C.Jorge%20luis%20borges%203091,%20yerba%20buena,%20tucuman+(Club%20las%20lomitas)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                      href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>
+              </div>
+              <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" data-bs-dismiss="modal" class="btn-rosa">Cerrar</button>
+              </div>
+            </div>
           </div>
-      </div>
+        </div>
       </div>
     </section>
     <section class="galeria">
-      <h2>Un recorrido de estos 15 años</h2>
+      <h2>Un breve recorrido de estos años</h2>
       <img src="./img/camara.png" width="40px">
       <div class="marco-carrusel">
         <div id="carouselExampleAutoplaying" class="carousel slide"
           data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <div class="foto-carrusel"
+                style="background-image: url(./img/carrousel/18.JPG);">.</div>
+            </div>
+            <div class="carousel-item">
               <div class="foto-carrusel"
                 style="background-image: url(./img/carrousel/1.jpeg.jpg);">.</div>
             </div>
@@ -193,60 +209,122 @@
             </div>
             <div class="carousel-item">
               <div class="foto-carrusel"
-                style="background-image: url(./img/carrousel/4.jpg);">.</div>  
+                style="background-image: url(./img/carrousel/4.jpg);">.</div>
             </div>
             <div class="carousel-item">
               <div class="foto-carrusel"
-                style="background-image: url(./img/carrousel/5.jpeg.jpg);">.</div>              
+                style="background-image: url(./img/carrousel/5.jpeg.jpg);">.</div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button"
-            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button"
-            data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </section>
-    <section class="seccion-fiesta">
-      <div class="card" style="width: 18rem;">
+    <section class="info">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Música</h5>
           <img src="./img/musica.png" width="50px">
           <p class="card-text">
             ¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
-          <a href="https://open.spotify.com/playlist/0BKTyKLLVNqk3PeHb0TH9y?si=ccb44c48b1d04151&pt=9e9a2d4cb779fb712100c5ead66a955d" class="btn btn-card">SUGERIR CANCIÓN</a>
+          <button class="btn-rosa" data-bs-toggle="modal"
+          data-bs-target="#modalSugerencia">SUGERIR CANCION</button>
+        <!-- modal confirmar asistencia -->
+        <div class="modal fade" id="modalSugerencia" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 d-flex flex-column ">
+                <img src="./img/musica.png" width="50px">
+                <h1 class="modal-title fs-5">Sugerir cancion</h1>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="nombre"
+                      placeholder="Tu nombre" 
+                      style="width:90%!important">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="cancion"
+                      placeholder="Nombre de la cancion y el autor"
+                      style="width:90%!important">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text"
+                      class="form-control input-nombre text-center"
+                      id="link"
+                      placeholder="Si deseas ingresar el link"
+                      style="width:95%!important">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" id='enviarCancion' class="btn-rosa">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Dress Code</h5>
-          <img src="./img/dress-code.png" width="50px">
-          <h5 class="card-text">Formal - Gala</h5>
+          <img src="./img/dress-code.png" class="my-4" width="50px">
+          <h5 class="card-text my-4">FORMAL - LARGO</h5>
+        </div>
+      </div>
+    </section>
+    <section class="regalo">
+      <h1>Regalos</h1>
+      <p>Si deseas regalarme algo mas<br> que tu hermosa presencia...</p>
+      <img src="./img/caja-de-regalo.png" class="my-4" width="60px">
+      <button class="btn-rosa" data-bs-toggle="modal"
+        data-bs-target="#modalRegalo">NUMERO DE CBU</button>
+      <div class="modal fade " tabindex="-1" role="dialog" id="modalRegalo">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0 d-flex flex-column ">
+              <img src="./img/cuenta-bancaria.png" width="50px">
+              <h1 class="modal-title fs-5 ">Informacion de la cuenta</h1>
+            </div>
+            <div class="modal-body">
+              <h6>CBU: 1500002200005265033132</h6>
+              <h6>ALIAS: FIRMA.TRIBU.SOL</h6>
+              <h6>TITULAR: ITURRE, CARLOS JOSE</h6>
+              <h6>DNI: 24802740</h6>
+              <h6>TIPO DE CUENTA: CAJA DE AHORRO EN PESOS</h6>
+              <h6>NUMERO DE CUENTA: 0526503313</h6>
+            </div>
+            <div class="modal-footer d-flex justify-content-center border-0">
+              <button type="button" data-bs-dismiss="modal" class="btn-rosa">Cerrar</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="instagram">
-      <div class="capa-insta"></div>
-      <div class="texto-insta">
+      <div class="instagram--texto">
         <h3>
           Una gran fiesta junto a vos
         </h3>
         <p>
-          Compartí tus fotos y videos de ese hermoso día
+          Compartí tus fotos y videos<br>de ese hermoso día
         </p>
         <img src="./img/instagram.png" width="60px">
-        <h2>#15Flor</h2>
-        <button class="btn-insta">Ver en Instagram</button>
+        <h2 class="my-2">#15FlorItu</h2>
+        <a href="https://www.instagram.com/" class="btn-rosa">Ver en Instagram</a>
       </div>
     </section>
+    <footer>
+      <p> <>Hecho con amor por Nahir y Gus</> </p>
+    </footer>
     <div id="controlMusica">
-      <button id='botonPause'class="btn-music"><img src="./img/nota-musical.png" width="100%"></button>
+      <button id='botonPause' class="btn-music"><img
+          src="./img/nota-musical.png" width="100%"></button>
     </div>
     <script src="app.js"></script>
     <script
