@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 :root {
-    --fuente-hero : 'Croissant One', cursive;
-    --fuente-titulo : 'DM Serif Display', serif;
-    --fuente-parrafo:'Poppins', sans-serif;
+    --fuente-hero: 'Croissant One', cursive;
+    --fuente-titulo: 'DM Serif Display', serif;
+    --fuente-parrafo: 'Poppins', sans-serif;
     --color0: #f0c0c4;
     --color1: #e3738c;
     --color2: #f2a3a9;
@@ -14,7 +15,7 @@
     --color7: #bec9a7;
 }
 
-.btn-rosa{
+.btn-rosa {
     background-color: var(--color1) !important;
     border: none;
     font-family: var(--fuente-parrafo);
@@ -24,14 +25,14 @@
     padding: 0.2rem 0.4rem;
 }
 
-.btn-rosa:hover{
+.btn-rosa:hover {
     background-color: var(--color2) !important;
     color: #fff;
 }
 
 body {
-    margin: 0!important;
-    padding: 0!important;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: var(--color7);
 }
 
@@ -84,7 +85,7 @@ body {
     height: 110vh;
     overflow: hidden;
     z-index: -2;
-   
+
 }
 
 .hero--capa {
@@ -95,7 +96,6 @@ body {
     height: 110vh;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
-    /* Aumenta el valor del z-index */
 }
 
 .hero::after {
@@ -201,7 +201,7 @@ body {
 }
 
 /* SECCION CUENTA REGRESIVA */
-.cuenta-regresiva{
+.cuenta-regresiva {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,6 +210,7 @@ body {
     position: relative;
     height: 50vh;
 }
+
 .cuenta-regresiva--aros {
     background: url('./img/cuenta-regresiva--aros.SVG') center center no-repeat;
     display: flex;
@@ -218,7 +219,6 @@ body {
     width: 350px;
     height: 350px;
     position: relative;
-     /* opacity: 0;  */
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -226,12 +226,12 @@ body {
     opacity: 1;
 }
 
-/* Agrega animación de fade out */
+
 .cuenta-regresiva--aros.fade-out {
     opacity: 0;
 }
 
-.cuenta-regresiva--aros .circulo{
+.cuenta-regresiva--aros .circulo {
     background-color: #fff;
     background-image: none;
     border-radius: 50%;
@@ -246,19 +246,21 @@ body {
     position: absolute;
     z-index: 0;
 }
-.cuenta-regresiva--aros .circulo h6{
+
+.cuenta-regresiva--aros .circulo h6 {
     font-size: 1.7rem;
     font-family: var(--fuente-titulo);
     font-weight: 400;
 }
-.cuenta-regresiva--aros .reloj{
+
+.cuenta-regresiva--aros .reloj {
     display: flex;
     justify-content: center;
     background-image: none;
     width: 100%;
 }
 
-.cuenta-regresiva--flor img{
+.cuenta-regresiva--flor img {
     width: 30px;
     height: auto;
     animation: girar 5s linear infinite;
@@ -267,12 +269,9 @@ body {
 @keyframes girar {
     from {
         transform: rotate(0deg);
-
     }
-
     to {
         transform: rotate(360deg);
-
     }
 }
 
@@ -323,7 +322,7 @@ body {
     }
 }
 
-.fiesta--titulo{
+.fiesta--titulo {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
@@ -348,17 +347,20 @@ body {
     text-align: center;
     color: var(--color6);
 }
-.fiesta--info h5{
-font-family: var(--fuente-titulo);
-font-size: 1.5rem;
+
+.fiesta--info h5 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
 }
-.fiesta--info p{
-font-family: var(--fuente-parrafo);
+
+.fiesta--info p {
+    font-family: var(--fuente-parrafo);
 }
+
 /* SECCION GALERIA  */
-.galeria{
+.galeria {
     position: relative;
-    top:0;
+    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -373,7 +375,7 @@ font-family: var(--fuente-parrafo);
     height: 90vh;
 }
 
-.galeria h2{
+.galeria h2 {
     font-family: var(--fuente-titulo);
     color: var(--color6);
     font-size: 1.5rem;
@@ -413,7 +415,7 @@ font-family: var(--fuente-parrafo);
 
 /* SECCION INFO */
 .info {
-    top:0;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,7 +426,8 @@ font-family: var(--fuente-parrafo);
     height: 100vh;
     overflow: hidden;
 }
-.card{
+
+.card {
     text-align: center;
     width: 18rem;
     display: flex;
@@ -434,21 +437,25 @@ font-family: var(--fuente-parrafo);
     margin: 1rem auto;
     background-color: #fff !important;
     border-radius: 10px !important;
-    height: 40%!important;
+    height: 40% !important;
 }
-.card img{
+
+.card img {
     margin: 1rem 0;
 }
-.card button{
+
+.card button {
     margin-top: 2rem;
     width: 70%;
 }
-.card-title{
+
+.card-title {
     font-family: var(--fuente-titulo);
     font-size: 1.5rem;
     margin: 1rem 0;
 }
-.card-text{
+
+.card-text {
     font-family: var(--fuente-parrafo);
 }
 
@@ -457,7 +464,8 @@ font-family: var(--fuente-parrafo);
     color: var(--color1);
     font-family: var(--fuente-titulo);
 }
-.modal-body h2{
+
+.modal-body h2 {
     color: var(--color1);
     font-family: var(--fuente-titulo);
 }
@@ -474,17 +482,13 @@ font-family: var(--fuente-parrafo);
 
 .form-control:focus {
     border-color: #e3738c !important;
-    /* Cambia el color al valor deseado (#e3738c en este caso) */
     box-shadow: 0 0 0 0.2rem rgba(227, 115, 140, 0.25) !important;
     border-bottom: none !important;
-    /* Cambia el sombreado a rojo o el color que desees */
 }
 
 .form-check-input:checked {
     background-color: #e3738c !important;
-    /* Cambia el color del fondo cuando está seleccionado */
     border-color: #e3738c !important;
-    /* Cambia el color del borde cuando está seleccionado */
 }
 
 .text-detalle {
@@ -565,7 +569,7 @@ font-family: var(--fuente-parrafo);
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color:var(--color7);
+    background-color: var(--color7);
     top: 0;
     padding-bottom: 3rem;
 }
@@ -580,24 +584,26 @@ font-family: var(--fuente-parrafo);
     height: 100%;
     box-sizing: border-box;
 }
-.regalo h1{
+
+.regalo h1 {
     color: var(--color6);
     font-family: var(--fuente-titulo);
 }
-.regalo p{
+
+.regalo p {
     color: var(--color6);
     font-family: var(--fuente-parrafo);
     text-align: center;
 }
 
-.regalo .modal-body{
+.regalo .modal-body {
     font-family: var(--fuente-parrafo);
 }
 
 .instagram {
     top: 0;
     left: 0;
-   
+
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/insta.jpg');
     height: 100vh;
@@ -635,16 +641,18 @@ font-family: var(--fuente-parrafo);
     justify-content: center;
     align-items: center;
 }
-.instagram--texto h3{
+
+.instagram--texto h3 {
     font-size: 1.5rem;
 }
-.instagram--texto a{
+
+.instagram--texto a {
     text-decoration: none;
     z-index: 1;
     position: relative;
 }
 
-footer{
+footer {
     background-color: var(--color6);
     color: #fff;
     font-family: var(--fuente-parrafo);
