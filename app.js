@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre = document.getElementById("nombre").value;
         const cancion = document.getElementById("cancion").value;
         const link = document.getElementById("link").value;
-        const mensaje = `Hola, ${nombre}! Te recomiendo la canción "${cancion}". Escúchala aquí: ${link}`;
+        const mensaje = `Hola, soy ${nombre}! Te recomiendo la canción "${cancion}". Escúchala aquí: ${link}`;
         const mensajeCodificado = encodeURIComponent(mensaje);
         const numeroDestino = '+5493814562955';
         const apiURL = `https://api.whatsapp.com/send?phone=${numeroDestino}&text=${mensajeCodificado}`;
